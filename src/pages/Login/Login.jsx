@@ -63,16 +63,26 @@ function Login() {
             name="password"
             value={password}
             onChange={handleChangePassword} />
-
-          <Button
-            className="w-100 mb-2"
+          {   disable === false ? 
+              <Button
+              className="buttonEnabled"
+              variant="primary"
+              data-testid="login-submit-btn"
+              disabled={disable}
+              onClick={handleClick}
+            >    Entrar
+            </Button> :    <Button
+            className="buttonDisabled"
             variant="primary"
             data-testid="login-submit-btn"
             disabled={disable}
             onClick={handleClick}
           >
-            Entrar
+               Entrar
           </Button>
+          }
+
+         
         </Form>
       </section>
       </C.Login>

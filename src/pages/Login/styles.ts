@@ -44,15 +44,22 @@ img {
 }
 
 button {
+
+}
+
+buttonDisabled {
   padding: 5%;
   border-radius: 10px;
   border: solid; 3px black;
   font-size: 150%;
-  background-color: black;
-  color: white;
 }
 
-buttonColor1 {
-  background-color: blue;
+.buttonEnabled {
+  background-color: black;
+  color: white;
+  padding: 5%;
+  border-radius: 10px;
+  border: solid; 3px black;
+  font-size: 150%;
 }
 `;
