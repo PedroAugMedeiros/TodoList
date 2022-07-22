@@ -2,18 +2,18 @@ import { useState } from 'react';
 import { ApiInterface } from '../interfaces';
 import { ApiService } from '../services';
 
-export const useApiInterface = () => {
+export const useApi = () => {
   
- const [charactersList, setcharactersList] = useState<ApiInterface[]>([]);
+ const [usersList, setusersList] = useState<ApiInterface[]>([]);
 
   const getAll = async () => {
     const { status, data } = await ApiService.getAll();
-    if (status !== 200 || data === charactersList) throw new Error();
-    setcharactersList(data.results);
+    if (status !== 200 || data === usersList) throw new Error();
+    setusersList(data);
   };
 
   return {
-    charactersList,
+    usersList,
     getAll,
   };
 };
