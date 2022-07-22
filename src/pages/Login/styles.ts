@@ -47,10 +47,10 @@ button {
 
 }
 
-buttonDisabled {
+.buttonDisabled {
+  background-color: white;
+  color: black;
   padding: 5%;
-  border-radius: 10px;
-  border: solid; 3px black;
   font-size: 150%;
 }
 

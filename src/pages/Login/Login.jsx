@@ -71,7 +71,7 @@ function Login() {
               disabled={disable}
               onClick={handleClick}
             >    Entrar
-            </Button> :    <Button
+            </Button> : <Button
             className="buttonDisabled"
             variant="primary"
             data-testid="login-submit-btn"
