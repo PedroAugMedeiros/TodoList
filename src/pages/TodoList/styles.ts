@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const Home = styled.div`
+export const TodoList = styled.div`
 display: flex;
 flex-direction: column;
 width: 100%;
@@ -19,7 +19,7 @@ h2 {
 }
 `;
 
-export const Users = styled.section`
+export const AddTask = styled.section`
 display: flex;
 flex-direction: column;
 justify-content: center;
@@ -31,7 +31,7 @@ padding: 5%;
 padding-top: 0;
 `
 
-export const User = styled.div`
+export const Tasks = styled.div`
 background-color: black;
 width: 80%;
 color: white;
@@ -42,7 +42,7 @@ padding: 5%;
 
 h1 {
   margin-top: 2%;
-  font-size: 500%;
+  font-size: 250%;
   border-bottom: 1px solid rgba(110, 110, 110, 0.9);
 }
 
@@ -56,13 +56,6 @@ button {
   background-color: black;
   color: green;
   width: 100%;
-  font-size: 220%;
-  border: solid 3px black;
-
-  cursor: pointer;
-
-  &:hover {
-    color: #00DBAF;
-  }
+  font-size: 250%;
 }
 `;

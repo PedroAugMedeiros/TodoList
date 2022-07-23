@@ -4,15 +4,16 @@ import {
   Route
 } from 'react-router-dom';
 import Home from './pages/Home';
-import Login from './pages/Login';
+import TodoList from './pages/TodoList';
 
 function App() {
 
   return (
     <C.MainContainer>
       <Routes> 
-      <Route exact path="/Login" element={ <Login />} />
       <Route exact path="/" element={ <Home />} />
+      <Route exact path="/Home" element={ <Home />} />
+      <Route exact path="/TodoList:userId" element={ <TodoList />} />
     </Routes> 
     </C.MainContainer>  
   );
