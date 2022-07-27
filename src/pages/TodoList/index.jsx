@@ -12,15 +12,41 @@ function TodoList() {
   
   const handleChange = (valueInput) => {
     const newUserList = JSON.parse(localStorage.getItem(userId));
-    setValueInput(valueInput);
+    if(valueInput !== null && valueInput !== ''){
+      setValueInput(valueInput);
+    }
     if(newUserList !== null) {
       setTasks(newUserList);
     }
   }
+  
+  const handleClickTasks = (id,status) => {
+    const selectedTask = document.getElementById(`${id}`)
+    
+    const convertNodeListInArray = [...selectedTask.classList];
+    
+    const removeStatus = convertNodeListInArray.some((el)=> el === status)
+
+    if(removeStatus) {
+      selectedTask.classList.remove(status)
+    } else
+    if(status === 'Pending'){
+      selectedTask.classList.remove('Completed')
+      selectedTask.classList.add(`${status}`)
+    } else if(status === 'Completed'){
+      selectedTask.classList.remove('Pending')
+      selectedTask.classList.add(`${status}`)
+    }
+   
+  }
 
   const handleClick = () => {
-    setTasks(prevState => [...prevState, inputValue])
-    setBlockGetStorage(false);
+    if(inputValue !== null && inputValue !== ''){
+      setTasks(prevState => [...prevState, inputValue])
+      setBlockGetStorage(false);
+    }
+
+    setValueInput('');
   }
 
   const ListTasks = () => {
@@ -29,11 +55,19 @@ function TodoList() {
     }
     
     const userListTask = JSON.parse(localStorage.getItem(userId));
-    console.log(userListTask)  
+      
     if(userListTask !== null) {
-    return userListTask.map((task)=>{
+    return userListTask.map((task, index)=> {
       return (
+        <C.Task id={index}>
         <h1>{task}</h1>
+        <C.TaskButtons>
+      <C.TaskButton className='buttonCompleted' 
+      id={index} onClick={({target}) => handleClickTasks(target.id,'Completed') }>Concluido</C.TaskButton>
+      <C.TaskButton 
+      className='buttonPending' id={index} onClick={({target}) => handleClickTasks(target.id,'Pending') }>Pendente</C.TaskButton>
+        </C.TaskButtons>
+        </C.Task>
       )
     })
   }
@@ -49,6 +83,7 @@ function TodoList() {
       <Header/>
       <C.AddTask>
         <C.Input 
+        value={inputValue}
         onChange={({target})=> handleChange(target.value)}
         placeholder='Adicione uma nova tarefa'/>
             <C.Button

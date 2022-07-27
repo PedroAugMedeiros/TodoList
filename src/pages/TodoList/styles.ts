@@ -17,6 +17,15 @@ h2 {
   color: black;
   font-size: 400%;
 }
+
+.Pending {
+  border: solid 2px red;
+}
+
+.Completed {
+  border: solid 2px green;
+}
+
 `;
 
 export const AddTask = styled.div`
@@ -59,12 +68,6 @@ color: white;
 box-shadow: 2px 2px 2px 2px black; 
 text-align: center;
 background-color: black;
-
-&:hover {
-        -webkit-transform: scale(1.3);
-        -ms-transform: scale(1.3);
-        transform: scale(1.3);
-}
 `;
 
 export const Tasks = styled.section`
@@ -72,26 +75,67 @@ background-color: black;
 width: 80%;
 color: white;
 border-radius: 10px;
-margin-bottom: 5%;
-text-align: center;
+
 padding: 5%;
 
 h1 {
+  width: 65%;
   margin-top: 2%;
-  font-size: 250%;
-  border-bottom: 1px solid rgba(110, 110, 110, 0.9);
+  font-size: 200%;
 }
+`;
 
-h3 {
-  margin: 0;
-  font-size: 230%;
-  border-bottom: 1px solid rgba(110, 110, 110, 0.9);
-}
+export const Task = styled.div`
+  display: flex;
+  font-size: 80%;  
+  border: 3px solid white;
+  border-radius: 10px;
+  justify-content: space-between;
+  paddig: 2%;
+  margin-bottom: 5%;
+  align-items: center;
 
-button {
-  background-color: black;
-  color: green;
-  width: 100%;
-  font-size: 250%;
-}
+
+  .Pending {
+    border: 3px solid red !important;
+    background-color: red;
+  }
+
+  h1 {
+    margin: 0;
+    padding: 3%;
+    text-align: center;
+  }
+`;
+
+export const TaskButtons = styled.div`
+width: 30%;
+display: flex;
+flex-direction: column;
+justify-content: space-around;
+margin: 3%;
+
+.buttonCompleted {
+  background-color: green;
+  border: solid 2px green;
+} 
+
+.buttonPending {
+  background-color: red;
+  border: solid 2px red !important;
+} 
+
+`;
+
+export const TaskButton = styled.button`
+cursor: pointer;
+width: 100%;
+padding: 3%;
+border-radius: 10px;
+font-size: 120%;
+color: white;
+box-shadow: 2px 2px 2px 2px black; 
+text-align: center;
+background-color: black;
+margin: 3%;
 `;
