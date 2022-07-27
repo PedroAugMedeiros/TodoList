@@ -19,19 +19,55 @@ h2 {
 }
 `;
 
-export const AddTask = styled.section`
+export const AddTask = styled.div`
 display: flex;
-flex-direction: column;
+flex-direction: row;
 justify-content: center;
 align-items: center;
 margin: 0;
 width: 100%;
 background-color: white;
-padding: 5%;
-padding-top: 0;
-`
+padding: 10%;
 
-export const Tasks = styled.div`
+input:focus {
+  outline: 0;
+} 
+`;
+
+export const Input = styled.input`
+width: 60%;
+padding: 3%;
+border: solid 5px black !important;
+border-right: none;
+border-top-left-radius: 10px;
+border-bottom-left-radius: 10px;
+font-size: 240%;
+box-shadow: 2px 2px 2px 2px black !important; 
+color: black;
+`;
+
+export const Button = styled.button`
+cursor: pointer;
+width: 20%;
+padding: 3%;
+border: solid 5px black;
+border-left: none;
+border-top-right-radius: 10px;
+border-bottom-right-radius: 10px;
+font-size: 120%;
+color: white;
+box-shadow: 2px 2px 2px 2px black; 
+text-align: center;
+background-color: black;
+
+&:hover {
+        -webkit-transform: scale(1.3);
+        -ms-transform: scale(1.3);
+        transform: scale(1.3);
+}
+`;
+
+export const Tasks = styled.section`
 background-color: black;
 width: 80%;
 color: white;

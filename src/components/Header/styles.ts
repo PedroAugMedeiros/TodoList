@@ -9,7 +9,10 @@ color: white;
 justify-content: center;
 align-items: center;
 font-family: sans-serif;
+
+
 h1 {
+  margin-top: 20%;
   font-size: 450%;
 }
 `;
