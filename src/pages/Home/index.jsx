@@ -2,7 +2,6 @@ import * as C from './styles';
 import { useState } from 'react';
 import { useApi } from '../../hooks/useApi';
 import { Navigate } from 'react-router-dom';
-import Header from '../../components/Header';
 
 function Home() {
   const { usersList , getAll } = useApi()
