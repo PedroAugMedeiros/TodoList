@@ -22,8 +22,8 @@ Projeto de Front-End, consumindo a api {JSON} Placeholder(https://jsonplaceholde
 ### `git clone` git@github.com:PedroAugMedeiros/TodoList.git
 ### ou  `git clone` https://github.com/PedroAugMedeiros/TodoList.git
 
-## Link Deploy
-
+## Link Deploy :
+### https://62e2ae49d78f6a392d0a3df4--todo-list-pedro-aug-med.netlify.app/TodoList:1
 ## Para rodar localmente :
 
 ### `npm install`

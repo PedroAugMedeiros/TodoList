@@ -37,8 +37,10 @@ function Home() {
   return (
     <C.Home>
       <h1>TodoList</h1>
+      <C.Title>
+      <h2>Users</h2>
+      </C.Title>
     <C.Users>
-    <h2>Users</h2>
       {Users()}
       </C.Users>
     </C.Home>

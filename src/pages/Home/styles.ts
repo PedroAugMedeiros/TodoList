@@ -1,5 +1,9 @@
 import styled from 'styled-components';
 
+const media = {
+  desktop: '@media(min-width: 1000px)',
+};
+
 export const Home = styled.div`
 display: flex;
 flex-direction: column;
@@ -30,7 +34,18 @@ width: 100%;
 background-color: white;
 padding: 5%;
 padding-top: 0;
-`
+
+${media.desktop} {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 100%;
+  background-color: white;
+  padding: 5%;
+  padding-top: 0;
+}
+`;
 
 export const User = styled.div`
 background-color: black;
@@ -41,15 +56,11 @@ margin-bottom: 5%;
 text-align: center;
 padding: 5%;
 
-h1 {
-  margin-top: 2%;
-  font-size: 500%;
-  border-bottom: 1px solid rgba(110, 110, 110, 0.9);
-}
+
 
 h3 {
   margin: 0;
-  font-size: 230%;
+  font-size: 200%;
   border-bottom: 1px solid rgba(110, 110, 110, 0.9);
 }
 
@@ -66,4 +77,18 @@ button {
     color: #00DBAF;
   }
 }
+
+${media.desktop} {
+  width: 10%;
+  margin: 1%;
+  padding: 3%;
+  word-wrap: break-word;
+}
 `;
+
+export const Title = styled.div`
+  background-color: white;
+  color: black;
+  text-align: center;
+  width: 100%;
+`
