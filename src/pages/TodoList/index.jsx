@@ -10,6 +10,12 @@ function TodoList() {
   const [inputValue, setValueInput ] = useState('') ;
   const [blockGetStorage, setBlockGetStorage ] = useState(true) ;
   
+
+  const clearInput = () => {
+    setValueInput('');
+    const input = document.getElementById('input');
+    input.value = '';
+  }
   const handleChange = (valueInput) => {
     const newUserList = JSON.parse(localStorage.getItem(userId));
     if(valueInput !== null && valueInput !== ''){
@@ -45,8 +51,7 @@ function TodoList() {
       setTasks(prevState => [...prevState, inputValue])
       setBlockGetStorage(false);
     }
-
-    setValueInput('');
+    clearInput();
   }
 
   const ListTasks = () => {
@@ -81,9 +86,9 @@ function TodoList() {
   return (
     <C.TodoList>
       <Header/>
+      <h1>TodoList</h1>
       <C.AddTask>
-        <C.Input 
-        value={inputValue}
+        <C.Input id="input"
         onChange={({target})=> handleChange(target.value)}
         placeholder='Adicione uma nova tarefa'/>
             <C.Button

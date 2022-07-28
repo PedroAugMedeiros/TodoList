@@ -5,8 +5,7 @@ function Header() {
 
   return (
     <C.Header>
-       <Link  to="/Home"><h2>Home</h2></Link>
-       <h1>TodoList</h1>
+       <Link  to="/Home"><h3>Home</h3></Link>
     </C.Header>
   )
 }

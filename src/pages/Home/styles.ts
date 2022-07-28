@@ -9,6 +9,7 @@ color: white;
 justify-content: center;
 align-items: center;
 font-family: sans-serif;
+
 h1 {
   font-size: 500%;
 }

@@ -4,13 +4,19 @@ export const TodoList = styled.div`
 display: flex;
 flex-direction: column;
 width: 100%;
-background-color: black;
+background-color: white;
 color: white;
 justify-content: center;
 align-items: center;
 font-family: sans-serif;
+
 h1 {
+  margin: 0;
+  width: 100%;
+  padding: 10%;
+  background-color: black;
   font-size: 500%;
+  text-align: center;
 }
 
 h2 {
@@ -75,6 +81,7 @@ background-color: black;
 width: 80%;
 color: white;
 border-radius: 10px;
+margin-bottom: 20%;
 
 padding: 5%;
 
@@ -90,6 +97,7 @@ export const Task = styled.div`
   font-size: 80%;  
   border: 3px solid white;
   border-radius: 10px;
+  color: white;
   justify-content: space-between;
   paddig: 2%;
   margin-bottom: 5%;
